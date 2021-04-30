@@ -1,9 +1,9 @@
 // Import libraries
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // Import views
-import ChactersList from './views/CharactersList/ChactersList';
+import ViewRickAndMortyList from './views/RickAndMorty/List/List';
 // Import components
-import Header from './components/Header/Header';
+import Header from './components/UI/Header/Header';
 // Import style
 import './App.css';
 
@@ -14,7 +14,7 @@ const App = () => {
         <Header />
         <main>
           <Switch>
-            <Route exact path="/" component={ChactersList}/>
+            <Route exact path="/" component={ViewRickAndMortyList}/>
           </Switch>
         </main>
       </BrowserRouter>

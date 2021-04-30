@@ -2,9 +2,9 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import actions
-import { getAllCharacters } from '../../redux/actions/charactersActions';
+import { getAllCharacters } from '../../../redux/actions/charactersActions';
 
-const ChactersList = ({ characters, getAllCharacters }) => {
+const RickAndMortyList = ({ characters, getAllCharacters }) => {
   // Get characters
   useEffect(() => {
     getAllCharacters();
@@ -30,4 +30,4 @@ const mapStateToProps = state => ({
   characters: state.charactersReducer.characters
 });
   
-export default connect(mapStateToProps, mapDispatchToProps)(ChactersList);
+export default connect(mapStateToProps, mapDispatchToProps)(RickAndMortyList);
