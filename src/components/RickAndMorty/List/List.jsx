@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import actions
-import { getAllCharacters } from '../../../redux/actions/charactersActions';
+import { getAllCharacters } from '../../../redux/actions/rickAndMortyActions';
 
 const RickAndMortyList = ({ characters, getAllCharacters }) => {
   // Get characters
@@ -12,9 +12,7 @@ const RickAndMortyList = ({ characters, getAllCharacters }) => {
 
   console.log(characters);
   return (
-    <section>
-      <h1 className="text-center mt-3">Chacters list</h1>
-    </section>
+    <section></section>
   )
 };
 
@@ -27,7 +25,7 @@ const mapDispatchToProps = dispatch => ({
 
 // Map state
 const mapStateToProps = state => ({
-  characters: state.charactersReducer.characters
+  characters: state.rickAndMortyReducer.characters
 });
   
 export default connect(mapStateToProps, mapDispatchToProps)(RickAndMortyList);
