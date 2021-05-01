@@ -1,4 +1,19 @@
+:root {
+  --grey-blue: #4980AF;
+  --grey-green: #14B7B7;
+  --bright-blue: #2ED2F7;
+  --light-blue: #28AEED;
+  --bright-green: #15D891;
+  --header-title-size: 1.75rem;
+  --main-title-size: 4rem;
+  --title-size: 1.5rem;
+  --text-size: 1.25rem;
+  --button-size: 1.125rem;
+}
+
 header {
   width: 100%;
-  height: 50px;
+  height: 100px;
+  font-family: ;
+  background-color: var(--grey-green);
 }

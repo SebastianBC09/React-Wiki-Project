@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => (
   <header>
-    <h5>React Wiki</h5>
+    <h3>React Wiki</h3>
   </header>
 );
 
