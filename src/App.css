@@ -13,7 +13,7 @@
   --light-blue: #28AEED;
   --bright-green: #15D891;
   --header-title-size: 1.75rem;
-  --main-title-size: 4rem;
+  --main-title-size: 6.4rem;
   --title-size: 2.4rem;
   --text-size: 1.8rem;
   --button-size: 1.125rem;
@@ -28,6 +28,12 @@
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: var(--grey-blue);
+  font-size: var(--main-title-size);
+  font-family: 'Hind', sans-serif;
 }
 
 h3{

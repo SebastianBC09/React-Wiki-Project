@@ -13,7 +13,6 @@ const RickAndMortyList = ({ characters, getAllCharacters }) => {
   console.log(characters);
   return (
     <section>
-      <h1 className="text-center mt-3">Chacters list</h1>
     </section>
   )
 };
