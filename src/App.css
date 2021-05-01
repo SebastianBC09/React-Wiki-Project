@@ -1,7 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Titles -> font-family: 'Hind', sans-serif; */
 /* Texts -> font-family: 'Roboto', sans-serif; */
 
 :root {
+  --white: #FFF;
   --grey-blue: #4980AF;
   --grey-green: #14B7B7;
   --bright-blue: #2ED2F7;
@@ -9,11 +14,10 @@
   --bright-green: #15D891;
   --header-title-size: 1.75rem;
   --main-title-size: 4rem;
-  --title-size: 1.5rem;
-  --text-size: 1.25rem;
+  --title-size: 2.4rem;
+  --text-size: 1.8rem;
   --button-size: 1.125rem;
 }
-
 
 * {
   box-sizing: border-box;
@@ -24,4 +28,9 @@
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+}
+
+h3{
+  color: var(--white);
+  font-size: var(--title-size);
 }
