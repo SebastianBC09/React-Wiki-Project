@@ -2,7 +2,7 @@
 import './Header.css';
 
 const Header = () => (
-  <header>
+  <header className="lg:px-0 px-4">
     <section className="container mx-auto flex items-center justify-between h-full">
       <h3>React Wiki</h3>
       <select className="api_select">
