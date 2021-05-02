@@ -1,8 +1,8 @@
 // Import const
 import { 
-  START_GET_ALL_CHARACTERS, 
-  SUCCESS_GET_ALL_CHARACTERS, 
-  ERROR_GET_ALL_CHARACTERS 
+  START_GET_ALL_RICK_AND_MORTY_CHARACTERS, 
+  SUCCESS_GET_ALL_RICK_AND_MORTY_CHARACTERS, 
+  ERROR_GET_ALL_RICK_AND_MORTY_CHARACTERS 
 } from '../consts';
 
 //Initialize state
@@ -15,17 +15,18 @@ const initialState = {
 };
 
 //Create reducers
-const characterReducer = (state = initialState, action) => {
+const rickAndMortyReducer = (state = initialState, action) => {
   switch (action.type) {
-    case START_GET_ALL_CHARACTERS:
+    case START_GET_ALL_RICK_AND_MORTY_CHARACTERS:
       return { 
         ...state, 
         data: action.payload,
         successRequest: false,
         errorRequest: false,
-        charactersLoading: true
+        charactersLoading: true,
+        characters: []
       };
-    case SUCCESS_GET_ALL_CHARACTERS:
+    case SUCCESS_GET_ALL_RICK_AND_MORTY_CHARACTERS:
       const { results: characters } = action.result;
       return { 
         ...state, 
@@ -33,7 +34,7 @@ const characterReducer = (state = initialState, action) => {
         charactersLoading: false,
         characters
       };
-    case ERROR_GET_ALL_CHARACTERS:
+    case ERROR_GET_ALL_RICK_AND_MORTY_CHARACTERS:
       console.log(action.error);
       return { 
         ...state, 
@@ -46,4 +47,4 @@ const characterReducer = (state = initialState, action) => {
   }
 }
 
-export default characterReducer;
+export default rickAndMortyReducer;

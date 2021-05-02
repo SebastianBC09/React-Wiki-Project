@@ -2,11 +2,13 @@
 import { combineReducers } from 'redux';
 
 // Import reducers
-import charactersReducer from './charactersReducer';
+import rickAndMortyReducer from './rickAndMortyReducer';
+import futuramaReducer from './futuramaReducer';
 
 // Add reducers to root
 const rootReducer = combineReducers({
-	charactersReducer
+	rickAndMortyReducer,
+	futuramaReducer
 });
 
 export default rootReducer;
