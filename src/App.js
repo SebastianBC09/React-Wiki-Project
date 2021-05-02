@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <main>
+        <main className="mb-20">
           <Switch>
             <Route exact path="/" component={ViewRickAndMortyList}/>
             <Route exact path="/futurama" component={ViewFuturamaList}/>
