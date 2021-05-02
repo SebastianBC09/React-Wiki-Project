@@ -14,7 +14,9 @@ const RickAndMortyList = ({ characters, getAllCharacters }) => {
   return (
     <section className="container mx-auto grid grid-cols-3 gap-5">
       <section className="bg-green-300">Morty</section>
-      <section className="bg-blue-300">MrPoppybutthole</section>
+      <section className="bg-blue-300">
+        MrPoppybutthole
+      </section>
       <section className="bg-indigo-300">BirdMan</section>
       <section className="bg-purple-300">BirdMan</section>
       <section className="bg-pink-300">BirdMan</section>
