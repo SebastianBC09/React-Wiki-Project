@@ -14,6 +14,8 @@ const initialState = {
   errorRequest: false,
   pokemonsLoading: false,
   pokemons: [],
+  pokemonLoading: false,
+  pokemon: {},
   messageError: ''
 };
 
@@ -30,11 +32,12 @@ const pokemonReducer = (state = initialState, action) => {
         pokemons: []
       };
     case SUCCESS_GET_ALL_POKEMONS:
+      const { results } = action.result;
       return { 
         ...state, 
         successRequest: true,
         pokemonsLoading: false,
-        pokemons: action.result
+        pokemons: results
       };
     case ERROR_GET_ALL_POKEMONS:
       console.log(action.error);
@@ -50,22 +53,22 @@ const pokemonReducer = (state = initialState, action) => {
         data: action.payload,
         successRequest: false,
         errorRequest: false,
-        pokemonsLoading: true,
-        pokemons: []
+        pokemonLoading: true,
+        pokemon: {}
       };
     case SUCCESS_GET_POKEMON_BY_ID:
       return { 
         ...state, 
         successRequest: true,
-        pokemonsLoading: false,
-        pokemons: action.result
+        pokemonLoading: false,
+        pokemon: action.result
       };
     case ERROR_GET_POKEMON_BY_ID:
       console.log(action.error);
       return { 
         ...state, 
         errorRequest: true,
-        pokemonsLoading: false,
+        pokemonLoading: false,
         messageError: action.error 
       };
     default:

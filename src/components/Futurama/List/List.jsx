@@ -47,6 +47,7 @@ const FuturamaList = ({
           <CharacterSimpleCard key={index} name={character.Name} imageUrl={character.PicUrl}/>
         ))}
         {charactersLoading && [1, 2, 3].map(item => <CharacterSimpleCard key={item} loading={true}/>)}
+        {!charactersLoading && characters.length === 0 && <h5>No data found</h5>}
       </section>
     </>
   )

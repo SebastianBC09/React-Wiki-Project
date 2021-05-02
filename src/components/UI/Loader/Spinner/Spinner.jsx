@@ -1,5 +1,5 @@
 // Import styles
-import 'Spinner.css';
+import './Spinner.css';
 
 const LoaderSpinner = () => (
   <div className="lds-ring"><div></div><div></div><div></div><div></div></div>

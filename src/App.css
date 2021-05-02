@@ -30,10 +30,16 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+h3,
+h5,
+p {
+  font-family: "Hind", sans-serif;
+}
+
 h1 {
   color: var(--grey-blue);
   font-size: var(--main-title-size);
-  font-family: "Hind", sans-serif;
 }
 
 h3 {
@@ -44,6 +50,11 @@ h3 {
 h5 {
   color: var(--grey-blue);
   font-size: var(--subtitle-size);
+}
+
+p {
+  color: var(--grey-blue);
+  font-size: var(--text-size);
 }
 
 input {

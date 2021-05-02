@@ -1,0 +1,26 @@
+.min-p-width {
+  min-width: 100px;
+}
+
+.pokemon_stat {
+  background-color: var(--bright-blue);
+  border-radius: 50%;
+  width: 105px;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.pokemon_stat_name {
+  color: var(--white);
+  text-align: center;
+}
+
+.pokemon_stat_value {
+  color: var(--white);
+  font-size: var(--title-size);
+}
