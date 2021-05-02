@@ -2,11 +2,13 @@
 import { all } from 'redux-saga/effects';
 
 // Import sagas
-import charactersSaga from './sagas/charactersSaga';
+import rickAndMortySaga from './sagas/rickAndMortySaga';
+import futuramaSaga from './sagas/futuramaSaga';
 
 // Add watchers
 export default function * rootSaga() {
   yield all([
-    charactersSaga(),
+    rickAndMortySaga(),
+    futuramaSaga()
   ]);
 }
