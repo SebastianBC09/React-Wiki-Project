@@ -31,3 +31,7 @@ In this react wiki website we'll be using the next tools in order to create & co
 ![IMG_0307](https://user-images.githubusercontent.com/53961155/116762328-b25a5e00-a9df-11eb-87cd-4828d3811e51.PNG)
 ## Figma Desing
 https://www.figma.com/file/iYASzqnDdikmwG1ekaOeWZ/Wiki-React?node-id=0%3A1
+
+# Deploy
+### Firebase Deploy URL
+Live project -> https://react-wiki-1297f.web.app/
