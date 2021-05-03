@@ -32,6 +32,6 @@ In this react wiki website we'll be using the next tools in order to create & co
 ## Figma Desing
 https://www.figma.com/file/iYASzqnDdikmwG1ekaOeWZ/Wiki-React?node-id=0%3A1
 
-#Deploy
-###Firebase Deploy URL
+# Deploy
+### Firebase Deploy URL
 Live project -> https://react-wiki-1297f.web.app/
