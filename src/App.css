@@ -6,17 +6,17 @@
 /* Texts -> font-family: 'Roboto', sans-serif; */
 
 :root {
-  --white: #FFF;
-  --grey-blue: #4980AF;
-  --grey-green: #14B7B7;
-  --bright-blue: #2ED2F7;
-  --light-blue: #28AEED;
-  --bright-green: #15D891;
-  --header-title-size: 1.75rem;
+  --white: #fff;
+  --grey-blue: #4980af;
+  --grey-green: #14b7b7;
+  --bright-blue: #2ed2f7;
+  --light-blue: #28aeed;
+  --bright-green: #15d891;
   --main-title-size: 6.4rem;
   --title-size: 2.4rem;
+  --subtitle-size: 2rem;
   --text-size: 1.8rem;
-  --button-size: 1.125rem;
+  --button-size: 1.4rem;
 }
 
 * {
@@ -30,13 +30,52 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+h3,
+h5,
+p {
+  font-family: "Hind", sans-serif;
+}
+
 h1 {
   color: var(--grey-blue);
   font-size: var(--main-title-size);
-  font-family: 'Hind', sans-serif;
 }
 
-h3{
+h3 {
   color: var(--white);
   font-size: var(--title-size);
+}
+
+h5 {
+  color: var(--grey-blue);
+  font-size: var(--subtitle-size);
+}
+
+p {
+  color: var(--grey-blue);
+  font-size: var(--text-size);
+}
+
+input {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button {
+  padding: 5px 10px;
+  font-size: var(--button-size);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+.button_bright-green {
+  background-color: var(--bright-green);
+}
+
+.button_light-blue {
+  background-color: var(--light-blue);
 }
