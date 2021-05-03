@@ -6,6 +6,9 @@ import {
   START_GET_ALL_RICK_AND_MORTY_CHARACTERS, 
   SUCCESS_GET_ALL_RICK_AND_MORTY_CHARACTERS, 
   ERROR_GET_ALL_RICK_AND_MORTY_CHARACTERS,
+  START_GET_RICK_AND_MORTY_CHARACTER_BY_ID,
+  SUCCESS_GET_RICK_AND_MORTY_CHARACTER_BY_ID,
+  ERROR_GET_RICK_AND_MORTY_CHARACTER_BY_ID
 } from '../../redux/consts';
 
 // Import fetch API function
@@ -25,7 +28,19 @@ export function * getAllCharactersRequest() {
   }
 }
 
+export function * getCharacterByIDRequest({payload}) {
+  const {characterID} = payload
+  // Do request
+  try {
+    const result = yield call(apiCall, `${baseURL}/character/${characterID}`, 'GET');
+    yield put({ type: SUCCESS_GET_RICK_AND_MORTY_CHARACTER_BY_ID, result });
+  } catch(error) {
+    yield put({ type: ERROR_GET_RICK_AND_MORTY_CHARACTER_BY_ID, error });
+  }
+}
+
 // Create watchers
 export default function * rickAndMortySaga() {
   yield takeLatest(START_GET_ALL_RICK_AND_MORTY_CHARACTERS, getAllCharactersRequest);
+  yield takeLatest(START_GET_RICK_AND_MORTY_CHARACTER_BY_ID, getCharacterByIDRequest);
 }

@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 // Import actions
 import { getAllCharacters } from '../../../redux/actions/rickAndMortyActions';
 
+import Card from '../../Character/Card/Card'
+
 const RickAndMortyList = ({ characters, getAllCharacters }) => {
   // Get characters
   useEffect(() => {
@@ -12,18 +14,12 @@ const RickAndMortyList = ({ characters, getAllCharacters }) => {
 
   console.log(characters);
   return (
-    <section className="container mx-auto grid grid-cols-3 gap-5">
-      <section className="bg-green-300">Morty</section>
-      <section className="bg-blue-300">
-        MrPoppybutthole
-      </section>
-      <section className="bg-indigo-300">BirdMan</section>
-      <section className="bg-purple-300">BirdMan</section>
-      <section className="bg-pink-300">BirdMan</section>
-      <section className="bg-yellow-300">BirdMan</section>
-      <section className="bg-red-300">BirdMan</section>
-      <section className="bg-gray-300">BirdMan</section>
-      <section className="bg-green-400">BirdMan</section>
+    <section className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+      {characters.map(character => (
+        <section key={character.id}>
+          <Card name={character.name} img={character.image} url={'/detail'} id={character.id}/>
+        </section>
+      ))}
     </section>
   )
 };
