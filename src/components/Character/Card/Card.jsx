@@ -1,20 +1,31 @@
+// Import libraries
 import { Link } from 'react-router-dom';
-import './Card.css'
+// Import component
+import LoaderSquare from '../../UI/Loader/Squeare/Square';
+// Import styles
+import './Card.css';
 
-const characterCard = ({ name, img, url, id }) => {
-  return (
-    <section className="container characterCard">
-      <section className="characterImg">
-      <img src={img} alt={name}/>
-      </section>
-      <section className="characterName grid grid-cols-2 absolute bottom-0 left-0 right-0 bg-white h-20">
-        <h5 className="text-gray-500 font-bold p-4">{name}</h5>
-        <Link to={`${url}/${id}`}>
-          <button className="button button_bright-green">Show </button>
-        </Link>
+const characterCard = ({ name, imageUrl, url, id, loading }) => (
+  <article className="character-simple-card">
+    {loading ?
+      <>
+        <section className="w-full h-full bg-gray-300 flex justify-center items-center">
+          <LoaderSquare />
         </section>
-    </section>
-  )
-}
+        <section className="absolute bottom-0 left-0 right-0 bg-white h-20"></section>
+      </>
+      :
+      <>
+        <img className="character-simple-card-img" src={imageUrl} alt={name}/>
+        <section className="absolute bottom-0 left-0 right-0 bg-white h-20 flex items-center px-4 flex justify-between">
+          <h5>{name}</h5>
+          <Link to={`${url}/${id}`}>
+            <button className="button button_bright-green">Show </button>
+          </Link>
+        </section>
+      </>  
+    }
+  </article>
+)
 
 export default characterCard;

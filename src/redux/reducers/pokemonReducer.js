@@ -34,8 +34,7 @@ const pokemonReducer = (state = initialState, action) => {
     case SUCCESS_GET_ALL_POKEMONS:
       const { results } = action.result;
       return { 
-        ...state, 
-        successRequest: true,
+        ...state,
         pokemonsLoading: false,
         pokemons: results
       };

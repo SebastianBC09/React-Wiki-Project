@@ -17,7 +17,7 @@ const RickAndMortyList = ({ characters, getAllCharacters }) => {
     <section className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
       {characters.map(character => (
         <section key={character.id}>
-          <Card name={character.name} img={character.image} url={'/detail'} id={character.id}/>
+          <Card name={character.name} imageUrl={character.image} url={'/detail'} id={character.id}/>
         </section>
       ))}
     </section>

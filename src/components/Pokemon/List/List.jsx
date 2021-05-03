@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
-import CharacterSimpleCard from '../../Character/SimpleCard/SimpleCard';
+import CharacterCard from '../../Character/Card/Card';
 // Import actions
 import { getAllPokemons } from '../../../redux/actions/pokemonActions';
 
@@ -25,13 +25,15 @@ const PokemonList = ({
   return (
     <section className="container mx-auto mt-16 px-4 md:px-0 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
       {pokemons.map((pokemon, index) => (
-        <CharacterSimpleCard 
+        <CharacterCard 
           key={index} 
           name={pokemon.name} 
           imageUrl={`https://pokeres.bastionbot.org/images/pokemon/${getPokemonId(pokemon.url)}.png`}
+          url={'/pokemon'}
+          id={getPokemonId(pokemon.url)}
         />
       ))}
-      {pokemonsLoading && [1, 2, 3].map(item => <CharacterSimpleCard key={item} loading={true}/>)}
+      {pokemonsLoading && [1, 2, 3].map(item => <CharacterCard key={item} loading={true}/>)}
       {!pokemonsLoading && pokemons.length === 0 && <h5>No data found</h5>}
     </section>
   )
