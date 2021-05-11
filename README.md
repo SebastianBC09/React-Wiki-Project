@@ -87,4 +87,5 @@ Joshua Pedraza
 ## Author
 
 William Santiago Alzate Barriga - William Santiago Alzate [C7] - Frontend
+
 Sebastian Ballen - Sebastian Ballen [C7] - Frontend
